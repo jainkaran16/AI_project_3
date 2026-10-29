@@ -10,7 +10,7 @@ import sys
 import unittest
 from unittest.mock import patch
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import busters
 import bustersAgents
 import bustersGhostAgents
@@ -74,7 +74,7 @@ class VisibleGhostTestDriver(Agent):
 
 class GameIntegrationTests(unittest.TestCase):
     def check_game(self, name, stationary):
-        board = layout.getLayout(str(Path(__file__).resolve().parents[1]/'layouts'/f'{name}.lay'))
+        board = layout.getLayout(str(Path(__file__).resolve().parent/'layouts'/f'{name}.lay'))
         self.assertIsNotNone(board)
         count = board.getNumGhosts()
         ghost_type = bustersGhostAgents.StationaryGhost if stationary else ghostAgents.RandomGhost

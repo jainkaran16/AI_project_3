@@ -1,9 +1,3 @@
 __pycache__/
-*.py[cod]
+*.pyc
 .DS_Store
-.venv/
-venv/
-bayesnets/validation/test_results.txt
-bayesnets/validation/supplied_examples.txt
-Project3-BayesNets.zip
-Project3-BayesNets.pdf

@@ -14,55 +14,55 @@
   "results": [
     {
       "method": "VE: center first",
-      "runtime_ms": 0.7322089950321242,
+      "runtime_ms": 0.7080840005073696,
       "peak_python_kib": 35.0546875,
       "binary_variables": 5
     },
     {
       "method": "VE: leaves first",
-      "runtime_ms": 0.30433399660978466,
+      "runtime_ms": 0.2805420008371584,
       "peak_python_kib": 19.75,
       "binary_variables": 5
     },
     {
       "method": "Enumeration",
-      "runtime_ms": 1.1629580039880238,
+      "runtime_ms": 1.0862500057555735,
       "peak_python_kib": 42.0,
       "binary_variables": 5
     },
     {
       "method": "VE: center first",
-      "runtime_ms": 2.797416993416846,
+      "runtime_ms": 2.634625001519453,
       "peak_python_kib": 85.109375,
       "binary_variables": 7
     },
     {
       "method": "VE: leaves first",
-      "runtime_ms": 0.4490830033319071,
+      "runtime_ms": 0.42058299732161686,
       "peak_python_kib": 25.203125,
       "binary_variables": 7
     },
     {
       "method": "Enumeration",
-      "runtime_ms": 5.774124998424668,
+      "runtime_ms": 5.448541000077967,
       "peak_python_kib": 96.4609375,
       "binary_variables": 7
     },
     {
       "method": "VE: center first",
-      "runtime_ms": 12.45616699452512,
+      "runtime_ms": 11.840416002087295,
       "peak_python_kib": 264.703125,
       "binary_variables": 9
     },
     {
       "method": "VE: leaves first",
-      "runtime_ms": 0.6282909962465055,
+      "runtime_ms": 0.5757920007454231,
       "peak_python_kib": 32.078125,
       "binary_variables": 9
     },
     {
       "method": "Enumeration",
-      "runtime_ms": 31.564707998768426,
+      "runtime_ms": 29.610000005050097,
       "peak_python_kib": 337.5234375,
       "binary_variables": 9
     }

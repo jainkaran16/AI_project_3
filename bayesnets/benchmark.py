@@ -1,6 +1,6 @@
 """Reproduce inference timings and memory separately, following Project 2's method.
 
-Run from bayesnets: python3 validation/benchmark.py
+Run from bayesnets: python3 benchmark.py
 Network construction, validation and table-size instrumentation are excluded.
 """
 import gc

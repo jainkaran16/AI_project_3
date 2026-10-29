@@ -21,6 +21,8 @@ def main():
     parser.add_argument('--zoom', type=float, default=1.0)
     parser.add_argument('--fixed-seed', action='store_true')
     parser.add_argument('--show-ghosts', action='store_true', help='Reveal ghosts for a teaching demonstration.')
+    parser.add_argument('--close-on-finish', action='store_true',
+                        help='Close automatically instead of keeping the final board visible.')
     options = parser.parse_args()
     if options.frame_time <= 0 or options.zoom <= 0 or not 1 <= options.ghosts <= 4:
         parser.error('Use a positive frame time and zoom, and 1-4 ghosts.')
@@ -39,7 +41,23 @@ def main():
         args.append('-s')
     print('Arrow keys or WASD: move. Q: stop. Close the game window to exit.')
     print('Hunt the invisible ghosts using the colored cells and noisy distance readings.')
-    busters.runGames(**busters.readCommand(args))
+    game = busters.readCommand(args)
+    if not options.close_on_finish:
+        import graphicsUtils
+        display = game['display']
+        original_finish = display.finish
+
+        def finish_after_click():
+            # Keep the final board visible, matching the Project 2 launcher.
+            graphicsUtils._leftclick_loc = None
+            graphicsUtils._rightclick_loc = None
+            graphicsUtils._ctrl_leftclick_loc = None
+            print('Game over. Click the Pac-Man window to close it.')
+            graphicsUtils.wait_for_click()
+            original_finish()
+
+        display.finish = finish_after_click
+    busters.runGames(**game)
 
 
 if __name__ == '__main__':
