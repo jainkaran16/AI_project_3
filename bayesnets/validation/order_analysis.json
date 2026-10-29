@@ -1,0 +1,34 @@
+{
+  "network": "Center -> Leaf0,...,Leaf5; binary variables; query Leaf0; no evidence",
+  "seed": 537,
+  "python_hash_seed": "1234",
+  "results": [
+    {
+      "method": "VE: center first",
+      "largest_created_factor_rows": 128,
+      "total_created_factor_rows": 382,
+      "posterior_Leaf0": [
+        0.3444444444444445,
+        0.6555555555555556
+      ]
+    },
+    {
+      "method": "VE: leaves first",
+      "largest_created_factor_rows": 4,
+      "total_created_factor_rows": 30,
+      "posterior_Leaf0": [
+        0.34444444444444444,
+        0.6555555555555556
+      ]
+    },
+    {
+      "method": "Enumeration",
+      "largest_created_factor_rows": 128,
+      "total_created_factor_rows": 1152,
+      "posterior_Leaf0": [
+        0.34444444444444444,
+        0.6555555555555556
+      ]
+    }
+  ]
+}

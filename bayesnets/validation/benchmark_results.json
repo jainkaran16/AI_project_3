@@ -1,0 +1,70 @@
+{
+  "methodology": {
+    "python_version": "3.12.5",
+    "seed": 537,
+    "python_hash_seed": "1234",
+    "timing_repeats": 7,
+    "memory_repeats": 5,
+    "warmup_queries_per_case": 1,
+    "runtime_statistic": "median untraced wall-clock time",
+    "memory_statistic": "median separate tracemalloc peak Python allocation",
+    "scope": "inference including evidence specialization and normalization; excludes model construction, oracle checks, and table instrumentation",
+    "network": "binary star: Center -> every Leaf; query Leaf0; no evidence"
+  },
+  "results": [
+    {
+      "method": "VE: center first",
+      "runtime_ms": 0.7322089950321242,
+      "peak_python_kib": 35.0546875,
+      "binary_variables": 5
+    },
+    {
+      "method": "VE: leaves first",
+      "runtime_ms": 0.30433399660978466,
+      "peak_python_kib": 19.75,
+      "binary_variables": 5
+    },
+    {
+      "method": "Enumeration",
+      "runtime_ms": 1.1629580039880238,
+      "peak_python_kib": 42.0,
+      "binary_variables": 5
+    },
+    {
+      "method": "VE: center first",
+      "runtime_ms": 2.797416993416846,
+      "peak_python_kib": 85.109375,
+      "binary_variables": 7
+    },
+    {
+      "method": "VE: leaves first",
+      "runtime_ms": 0.4490830033319071,
+      "peak_python_kib": 25.203125,
+      "binary_variables": 7
+    },
+    {
+      "method": "Enumeration",
+      "runtime_ms": 5.774124998424668,
+      "peak_python_kib": 96.4609375,
+      "binary_variables": 7
+    },
+    {
+      "method": "VE: center first",
+      "runtime_ms": 12.45616699452512,
+      "peak_python_kib": 264.703125,
+      "binary_variables": 9
+    },
+    {
+      "method": "VE: leaves first",
+      "runtime_ms": 0.6282909962465055,
+      "peak_python_kib": 32.078125,
+      "binary_variables": 9
+    },
+    {
+      "method": "Enumeration",
+      "runtime_ms": 31.564707998768426,
+      "peak_python_kib": 337.5234375,
+      "binary_variables": 9
+    }
+  ]
+}
